@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/11 21:33:27 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:40:10 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,18 @@ int	dlst_issort(t_dlst *dlst, t_node *end, int dir)
 		return (DESC);
 	}
 	return (ERR);
+}
+
+void	dlst_free(t_dlst *dlst)
+{
+	t_node	*curr;
+	t_node	*tmp;
+
+	curr = dlst->first;
+	while (curr != NULL)
+	{
+		tmp = curr;
+		curr = curr->next;
+		free(tmp);
+	}
 }

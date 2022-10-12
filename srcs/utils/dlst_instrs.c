@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:01 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/11 19:48:32 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 15:20:48 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,22 +75,39 @@ t_node	*dlst_removeback(t_dlst *dlst)
 	if (dlst == NULL || dlst_isempty(dlst))
 		return (NULL);
 	ret = dlst->last;
-	dlst->last->prev->next = NULL;
-	dlst->last = dlst->last->prev;
+	if (dlst->size == 1)
+	{
+		dlst->first = NULL;
+		dlst->last = NULL;
+	}
+	else
+	{
+		dlst->last = dlst->last->prev;
+		dlst->last->next = NULL;
+		ret->prev = NULL;
+	}
 	dlst->size--;
 	return (ret);
 }
 
-void	dlst_free(t_dlst *dlst)
+t_node	*dlst_removefront(t_dlst *dlst)
 {
-	t_node	*curr;
-	t_node	*tmp;
+	t_node	*ret;
 
-	curr = dlst->first;
-	while (curr != NULL)
+	if (dlst == NULL || dlst_isempty(dlst))
+		return (NULL);
+	ret = dlst->first;
+	if (dlst->size == 1)
 	{
-		tmp = curr;
-		curr = curr->next;
-		free(tmp);
+		dlst->first = NULL;
+		dlst->last = NULL;
 	}
+	else
+	{
+		dlst->first = dlst->first->next;
+		dlst->first->prev = NULL;
+		ret->next = NULL;
+	}
+	dlst->size--;
+	return (ret);
 }

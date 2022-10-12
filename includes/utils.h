@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/11 20:38:45 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:57:11 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,13 @@ void	ft_isnumeric_2d(char **argv);
 void	ft_isdup(t_dlst *stack_A, int val);
 void	error_log(void);
 void	error_free(t_dlst *stack_A);
+void	error_free2(t_dlst *stack_A, t_dlst *stack_B);
 void	error_free_log(t_dlst *stack_A);
 void	dlst_addfront(t_dlst *dlst, t_node *node);
 void	dlst_addback(t_dlst *dlst, t_node *node);
 void	dlst_addat(t_dlst *dlst, t_node *node, int i);
 t_node	*dlst_removeback(t_dlst *dlst);
+t_node	*dlst_removefront(t_dlst *dlst);
 void	dlst_print(t_dlst *dlst);
 int		dlst_isempty(t_dlst *dlst);
 int		dlst_issort(t_dlst *dlst, t_node *end, int dir);
