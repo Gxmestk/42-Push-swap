@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 16:29:10 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:51:03 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	rotate(t_dlst *stack, int s)
 		ft_printf("ra\n");
 	else if (s == B)
 		ft_printf("rb\n");
+	dlst_print(stack);
 }
 /*last(top) go to fisrt(bottom)*/

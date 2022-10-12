@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 17:18:42 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:17:01 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct s_node
 	int				val;
 	struct s_node	*next;
 	struct s_node	*prev;
-	struct s_node	*asc;
 }	t_node;
 
 typedef struct s_dlst
@@ -41,16 +40,16 @@ typedef struct s_dlst
 	int		size;
 }	t_dlst;
 
-void	check_args(t_dlst *stack_A, int argc, char **argv);
+void	check_args(t_dlst *stack_a, int argc, char **argv);
 int		ft_isdigit(int c);
-long	ft_atol(t_dlst *stack_A, char **str);
-void 	ft_isnumeric_1d(char *argv1);
+long	ft_atol(t_dlst *stack_a, char **str);
+void	ft_isnumeric_1d(char *argv1);
 void	ft_isnumeric_2d(char **argv);
-void	ft_isdup(t_dlst *stack_A, int val);
+void	ft_isdup(t_dlst *stack_a, int val);
 void	error_log(void);
-void	error_free(t_dlst *stack_A);
-void	error_free2(t_dlst *stack_A, t_dlst *stack_B);
-void	error_free_log(t_dlst *stack_A);
+void	error_free(t_dlst *stack_a);
+void	error_free2(t_dlst *stack_a, t_dlst *stack_b);
+void	error_free_log(t_dlst *stack_a);
 void	dlst_addfront(t_dlst *dlst, t_node *node);
 void	dlst_addback(t_dlst *dlst, t_node *node);
 void	dlst_addat(t_dlst *dlst, t_node *node, int i);

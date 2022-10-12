@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 23:41:47 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/08 14:51:59 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:14:31 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,5 @@
 # include "utils.h"
 # include "instr.h"
 # include "sorting.h"
-
-
-
 
 #endif

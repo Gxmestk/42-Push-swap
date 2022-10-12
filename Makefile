@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 18:12:38 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/10/11 19:37:05 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/10/12 19:13:28 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ INSTR_SRCS			= $(INSTR_DIR)/swap.c								\
 					  $(INSTR_DIR)/push.c								\
 					  $(INSTR_DIR)/rotate.c								\
 					  $(INSTR_DIR)/rrotate.c
-SORTING_SRCS		= $(SORTING_DIR)/merge_sort.c						\
+SORTING_SRCS		= $(SORTING_DIR)/selection_sort.c					\
 					  $(SORTING_DIR)/quick_sort.c						\
 					  $(SORTING_DIR)/3val_sort.c						\
 					  $(SORTING_DIR)/2val_sort.c

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:13:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 17:30:08 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 20:30:01 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ typedef struct s_val
 void	quick_sort(t_dlst *this, t_dlst *that, t_node *end, int s);
 void	two_val_sort(t_dlst *stack, int s);
 void	three_val_sort(t_dlst *stack, t_node *end, int s);
+int		selection_sort(t_dlst *stack, t_node *end);
 
 #endif

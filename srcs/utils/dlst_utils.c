@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 17:33:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:52:31 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ void	dlst_print(t_dlst *dlst)
 
 	i = 0;
 	curr = dlst->last;
-	ft_printf("\nsize(%ld)\n", dlst->size);
+	ft_printf("size(%ld)\n", dlst->size);
 	while (curr != NULL)
 	{
 		ft_printf("%d | %d\n", i, curr->val);
 		curr = curr->prev;
 		i++;
 	}
+	ft_printf("-------------------\n");
 }
 
 int	dlst_isempty(t_dlst *dlst)

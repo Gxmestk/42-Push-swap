@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils1.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/12 21:14:02 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/10/12 21:16:47 by tkhemniw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "utils.h"
 
-void	ft_isdup(t_dlst *stack_A, int val)
+void	ft_isdup(t_dlst *stack_a, int val)
 {
 	t_node	*curr;
 
-	curr = stack_A->first;
+	curr = stack_a->first;
 	while (curr != NULL)
 	{
 		if (curr->val == val)
-			error_free_log(stack_A);
+			error_free_log(stack_a);
 		curr = curr->next;
 	}
 }
@@ -59,7 +71,7 @@ void	ft_isnumeric_2d(char **argv)
 	}
 }
 
-long	ft_atol(t_dlst *stack_A, char **str)
+long	ft_atol(t_dlst *stack_a, char **str)
 {
 	int		i;
 	int		sign;
@@ -80,7 +92,7 @@ long	ft_atol(t_dlst *stack_A, char **str)
 	result *= sign;
 	if ((sign < 0 && result < INT_MIN)
 		|| (sign > 0 && result > INT_MAX))
-		error_free_log(stack_A);
+		error_free_log(stack_a);
 	*str += i;
 	return (result);
 }
