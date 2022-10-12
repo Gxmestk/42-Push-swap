@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:26 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 20:49:43 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:21:57 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	selection_sort(t_dlst *stack, t_node *end)
 {
 	int		*sort;
 	int		n;
-	int 	i;
+	int		i;
 	int		min_i;
 	int		median;
 

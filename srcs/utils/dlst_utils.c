@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 18:52:31 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:20:29 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	dlst_issort(t_dlst *dlst, t_node *end, int dir)
 		}
 		return (ASC);
 	}
-	else if (dir == DESC)
+	else
 	{
 		while (curr != end)
 		{
@@ -61,7 +61,6 @@ int	dlst_issort(t_dlst *dlst, t_node *end, int dir)
 		}
 		return (DESC);
 	}
-	return (ERR);
 }
 
 void	dlst_free(t_dlst *dlst)

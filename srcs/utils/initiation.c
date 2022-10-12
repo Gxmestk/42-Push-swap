@@ -6,12 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:45:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:16:47 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:21:02 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
-
 
 static	t_node	*newnode(t_dlst *stack_a, int val)
 {
@@ -24,7 +23,6 @@ static	t_node	*newnode(t_dlst *stack_a, int val)
 	node->val = val;
 	node->next = NULL;
 	node->prev = NULL;
-	node->asc = NULL;
 	return (node);
 }
 
