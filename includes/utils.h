@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 14:57:11 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:18:42 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # define NO 0
 # define ASC 1
 # define DESC 2
+# define A 1
+# define B 2
 # define MERGE 1
 
 typedef struct s_node
@@ -58,4 +60,5 @@ void	dlst_print(t_dlst *dlst);
 int		dlst_isempty(t_dlst *dlst);
 int		dlst_issort(t_dlst *dlst, t_node *end, int dir);
 void	dlst_free(t_dlst *dlst);
+int		dlst_node_count(t_dlst *dlst, t_node *end);
 #endif

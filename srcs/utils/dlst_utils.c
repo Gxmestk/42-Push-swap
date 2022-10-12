@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 14:40:10 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:33:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ void	dlst_free(t_dlst *dlst)
 	t_node	*curr;
 	t_node	*tmp;
 
+	if (dlst == NULL)
+		return ;
 	curr = dlst->first;
 	while (curr != NULL)
 	{
@@ -75,4 +77,19 @@ void	dlst_free(t_dlst *dlst)
 		curr = curr->next;
 		free(tmp);
 	}
+}
+
+int	dlst_node_count(t_dlst *dlst, t_node *end)
+{
+	t_node	*curr;
+	int		i;
+
+	i = 0;
+	curr = dlst->last;
+	while (curr != end->prev)
+	{
+		i++;
+		curr = curr->prev;
+	}
+	return (i);
 }
