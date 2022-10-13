@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 10:16:11 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/13 14:26:21 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:36:04 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,14 @@ void	easy_sort(t_dlst *stack, int s)
 		{
 			curr = stack->last;
 			ncurr = stack->first;
-			if ((curr == max/* && curr->prev == min)*/ || curr->val <= curr->prev->val) && ncurr->next->val < ncurr->val)
+			if (((curr == max && curr->prev == min) || curr->val <= curr->prev->val) && ncurr->next->val < ncurr->val)
 				rotate(stack, s);
-			else if (((/*ncurr == max && */ncurr->next == min) || ncurr->next->val > ncurr->val) && curr->prev->val > curr->val)
+			else if (((ncurr == max && ncurr->next == min) || ncurr->next->val > ncurr->val) && curr->prev->val > curr->val)
 				rrotate(stack, s);
-			else if (curr->val > curr->prev->va
-			l)
+			else if (curr->val > curr->prev->val)
 				swap(stack, s);
+			else
+				rotate(stack, s);
 			if (i == 10)
 				break ;
 			i++;
