@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:26 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:21:57 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/13 10:17:14 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	*copy_stack_to_arr(t_dlst *stack, t_node *end, int n)
 	return (unsorted);
 }
 
-int	selection_sort(t_dlst *stack, t_node *end)
+int	median_selection_sort(t_dlst *stack, t_node *end)
 {
 	int		*sort;
 	int		n;

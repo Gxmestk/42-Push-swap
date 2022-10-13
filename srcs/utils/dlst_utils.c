@@ -6,20 +6,25 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:20:29 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/13 11:22:09 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-void	dlst_print(t_dlst *dlst)
+void	dlst_print(t_dlst *dlst, int s)
 {
 	t_node	*curr;
 	int		i;
+	char	ss;
 
 	i = 0;
 	curr = dlst->last;
-	ft_printf("size(%ld)\n", dlst->size);
+	if (s == A)
+		ss = 'A';
+	else
+		ss = 'B';
+	ft_printf("stack(%c) size(%ld)\n", ss, dlst->size);
 	while (curr != NULL)
 	{
 		ft_printf("%d | %d\n", i, curr->val);

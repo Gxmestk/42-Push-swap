@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:17:01 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/13 11:03:07 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	dlst_addback(t_dlst *dlst, t_node *node);
 void	dlst_addat(t_dlst *dlst, t_node *node, int i);
 t_node	*dlst_removeback(t_dlst *dlst);
 t_node	*dlst_removefront(t_dlst *dlst);
-void	dlst_print(t_dlst *dlst);
+void	dlst_print(t_dlst *dlst, int s);
 int		dlst_isempty(t_dlst *dlst);
 int		dlst_issort(t_dlst *dlst, t_node *end, int dir);
 void	dlst_free(t_dlst *dlst);
