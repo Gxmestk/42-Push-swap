@@ -22,7 +22,7 @@ void	push(t_dlst	*stack_from, t_dlst *stack_to, int s)
 		ft_printf("pb\n");
 	else if (s == B)
 		ft_printf("pa\n");
-	if (s == A)
+	/*if (s == A)
 	{
 		dlst_print(stack_from, A);
 		dlst_print(stack_to, B);
@@ -31,5 +31,5 @@ void	push(t_dlst	*stack_from, t_dlst *stack_to, int s)
 	{
 		dlst_print(stack_from, B);
 		dlst_print(stack_to, A);
-	}
+	}*/
 }

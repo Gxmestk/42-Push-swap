@@ -22,6 +22,6 @@ void	swap(t_dlst *stack, int s)
 		ft_printf("sa\n");
 	else if (s == B)
 		ft_printf("sb\n");
-	dlst_print(stack, s);
+	//dlst_print(stack, s);
 }
 /*last(top) go to fisrt(bottom)*/

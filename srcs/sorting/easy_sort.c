@@ -12,30 +12,32 @@
 
 #include "sorting.h"
 
-t_node	*min_val_node(t_dlst *stack)
+static t_node	*min_val_node(t_dlst *stack)
 {
 	t_node	*min;
 	t_node	*curr;
 
 	curr = stack->last;
+	min = curr;
 	while (curr != stack->first)
 	{
-		if (curr->prev->val < curr->val)
+		if (curr->prev->val < min->val)
 			min = curr->prev;
 		curr = curr->prev;
 	}
 	return (min);
 }
 
-t_node	*max_val_node(t_dlst *stack)
+static t_node	*max_val_node(t_dlst *stack)
 {
 	t_node	*max;
 	t_node	*curr;
 
 	curr = stack->last;
+	max = curr;
 	while (curr != stack->first)
 	{
-		if (curr->prev->val > curr->val)
+		if (curr->prev->val > max->val)
 			max = curr->prev;
 		curr = curr->prev;
 	}
@@ -57,17 +59,19 @@ void	easy_sort(t_dlst *stack, int s)
 	{
 		while (!dlst_issort(stack, stack->first, ASC))
 		{
+			ft_printf("i = %d   ", i);
 			curr = stack->last;
 			ncurr = stack->first;
-			if (((curr == max && curr->prev == min) || curr->val <= curr->prev->val) && ncurr->next->val < ncurr->val)
-				rotate(stack, s);
-			else if (((ncurr == max && ncurr->next == min) || ncurr->next->val > ncurr->val) && curr->prev->val > curr->val)
-				rrotate(stack, s);
-			else if (curr->val > curr->prev->val)
+			if (((curr->val > curr->prev->val) && !(curr->prev == min && curr == max) && ncurr))
 				swap(stack, s);
+			else if (curr->val > stack->first->val)
+				if (curr == min)
+					swap(stack, s);
+				else
+					rotate(stack, s);
 			else
-				rotate(stack, s);
-			if (i == 10)
+				rrotate(stack, s);
+			if (i == 50)
 				break ;
 			i++;
 		}

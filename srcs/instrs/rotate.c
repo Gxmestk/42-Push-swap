@@ -22,6 +22,6 @@ void	rotate(t_dlst *stack, int s)
 		ft_printf("ra\n");
 	else if (s == B)
 		ft_printf("rb\n");
-	dlst_print(stack, s);
+	//dlst_print(stack, s);
 }
 /*last(top) go to fisrt(bottom)*/
