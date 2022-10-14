@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:13 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/13 13:02:36 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/14 20:31:00 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,24 @@ void	push(t_dlst	*stack_from, t_dlst *stack_to, int s)
 		ft_printf("pb\n");
 	else if (s == B)
 		ft_printf("pa\n");
-	/*if (s == A)
+}
+
+void	push_back_count(t_dlst *stack_from, t_dlst *stack_to, int s, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
 	{
-		dlst_print(stack_from, A);
-		dlst_print(stack_to, B);
+		push(stack_from, stack_to, s);
+		i++;
 	}
-	else if (s == B)
+}
+
+void	push_back_all(t_dlst *stack_from, t_dlst *stack_to, int s)
+{
+	while (!dlst_isempty(stack_from))
 	{
-		dlst_print(stack_from, B);
-		dlst_print(stack_to, A);
-	}*/
+		push(stack_from, stack_to, s);
+	}
 }

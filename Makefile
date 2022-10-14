@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 18:12:38 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/10/13 10:30:53 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/10/14 23:42:42 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ UTIL_SRCS			= $(UTIL_DIR)/initiation.c							\
 					  $(UTIL_DIR)/dlst_instrs.c							\
 					  $(UTIL_DIR)/dlst_utils.c							\
 					  $(UTIL_DIR)/utils1.c								\
-					  $(UTIL_DIR)/utils2.c
+					  $(UTIL_DIR)/utils2.c								\
+					  $(UTIL_DIR)/utils3.c
 INSTR_SRCS			= $(INSTR_DIR)/swap.c								\
 					  $(INSTR_DIR)/push.c								\
 					  $(INSTR_DIR)/rotate.c								\
@@ -53,7 +54,8 @@ SORTING_SRCS		= $(SORTING_DIR)/selection_sort.c					\
 					  $(SORTING_DIR)/quick_sort.c						\
 					  $(SORTING_DIR)/3val_sort.c						\
 					  $(SORTING_DIR)/2val_sort.c						\
-					  $(SORTING_DIR)/easy_sort.c
+					  $(SORTING_DIR)/4val_sort.c						\
+					  $(SORTING_DIR)/5val_sort.c
 CHECKER_SRCS		= $(CHECKER_DIR)/checker.c
 
 #Object files 

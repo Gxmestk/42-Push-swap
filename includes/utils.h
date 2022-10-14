@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/13 11:03:07 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/14 23:39:17 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,8 @@ int		dlst_isempty(t_dlst *dlst);
 int		dlst_issort(t_dlst *dlst, t_node *end, int dir);
 void	dlst_free(t_dlst *dlst);
 int		dlst_node_count(t_dlst *dlst, t_node *end);
+t_node	*min_val_node(t_dlst *stack);
+t_node	*max_val_node(t_dlst *stack);
+void 	max_val_index(int *arr, int size, int *mvi, int *nmvi);
+void	copy_stack_to_arr_nomal(t_dlst *stack, int *arr, int size);
 #endif

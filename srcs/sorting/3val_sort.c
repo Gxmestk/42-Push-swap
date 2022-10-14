@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:21:30 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/14 20:17:28 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,7 @@ static void	tvs_opt_1instr(t_dlst *stack, int s)
 
 void	three_val_sort(t_dlst *stack, t_node *end, int s)
 {
-	//t_val	v;
-
 	if (dlst_issort(stack, end, s))
 		return ;
-	else if (stack->size == 3)
-		tvs_opt_1instr(stack, s);
-	else
-		ft_printf("NAH\n");
+	tvs_opt_1instr(stack, s);
 }

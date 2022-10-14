@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instr.h                                            :+:      :+:    :+:   */
+/*   5val_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 14:13:07 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/14 20:31:04 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/10/14 20:18:19 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/10/15 00:13:45 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INSTR_H
-# define INSTR_H
+#include "sorting.h"
 
-# include "utils.h"
+void	five_val_sort(t_dlst *stack_a, t_dlst *stack_b, int s)
+{
+	int		arr[5];
+	int		mvi;
+	int		nmvi;
 
-void	push(t_dlst	*stack_from, t_dlst *stack_to, int s);
-void	rotate(t_dlst *stack, int s);
-void	rrotate(t_dlst *stack, int s);
-void	swap(t_dlst *stack, int s);
-void	push_back_count(t_dlst *stack_from, t_dlst *stack_to, int s, int n);
-void	push_back_all(t_dlst *stack_from, t_dlst *stack_to, int s);
-#endif
+	copy_stack_to_arr_nomal(stack_a, arr, 5);
+	max_val_index(arr, 5, &mvi, &nmvi);
+	if (mvi == 0)
+	{
+		 
+	}
+}
