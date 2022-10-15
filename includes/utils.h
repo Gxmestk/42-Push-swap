@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/14 23:39:17 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/15 22:11:40 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@
 # define DESC 2
 # define A 1
 # define B 2
+# define X 33
+# define Y 66
+# define Z 99
 # define MERGE 1
 
 typedef struct s_node

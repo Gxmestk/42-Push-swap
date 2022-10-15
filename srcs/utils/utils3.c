@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 22:32:40 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/14 23:45:42 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/15 09:59:52 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void next_min_val_index(int *arr, int size, int *mvi, int *nmvi)
 	*nmvi = i;
 	while (i < size)
 	{
-		if (arr[i] < arr[*nmvi] && *nmvi != *mvi)
+		if (arr[i] < arr[*nmvi] && i != *mvi)
 			*nmvi = i;
 		i++; 
 	}
@@ -72,7 +72,7 @@ void max_val_index(int *arr, int size, int *mvi, int *nmvi)
 			*mvi = i;
 		i++;
 	}
-	next_min_val_index(arr, size - 1, mvi, nmvi);
+	next_min_val_index(arr, size, mvi, nmvi);
 }
 
 void	copy_stack_to_arr_nomal(t_dlst *stack, int *arr, int size)

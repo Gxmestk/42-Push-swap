@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:14:02 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:21:15 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/15 11:59:13 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,27 @@ int	ft_isdigit(int c)
 void	ft_isnumeric_1d(char *argv1)
 {
 	int	i;
+	int	anum;
 
 	i = 0;
-	if (!ft_isdigit(argv1[0]))
+	anum = 0;
+	if (!(ft_isdigit(argv1[0]) || argv1[0] == '-' || argv1[0] == '+'))
 		error_log();
 	while (argv1[i] != '\0')
 	{
 		if (argv1[i] == '-' || argv1[i] == '+')
 			i++;
 		while ((ft_isdigit(argv1[i])))
+		{
+			anum = 1;
 			i++;
+		}
 		if (argv1[i] == ' ')
+		{
 			i++;
-		else if (argv1[i] != '\0')
+			anum = 0;
+		}
+		else if (argv1[i] != '\0' || !anum)
 			error_log();
 	}
 }
@@ -54,19 +62,27 @@ void	ft_isnumeric_2d(char **argv)
 {
 	int	i;
 	int	j;
+	int	anum;
 
 	i = 1;
+	anum = 0;
 	while (argv[i] != NULL)
 	{
 		j = 0;
-		while (argv[i][j] != '\0')
+
+		if (argv[i][j] == '-' || argv[i][j] == '+')
+			j++;
+		while ((ft_isdigit(argv[i][j])))
 		{
-			if (!(ft_isdigit(argv[i][j]) || argv[i][j] == '-'
-				|| argv[i][j] == '+'))
-				error_log();
+			anum = 1;
 			j++;
 		}
+		while (argv[i][j] == ' ')
+			j++;
+		if (argv[i][j] != '\0' || !anum)
+			error_log();
 		i++;
+		anum = 0;
 	}
 }
 

@@ -1,38 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils2.c                                           :+:      :+:    :+:   */
+/*   lazy_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 17:01:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 10:33:13 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/10/15 20:14:25 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/10/15 20:37:13 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+/*#include "sorting.h"
 
-void	error_log(void)
-{
-	write(2, "Error\n", 6);
-	exit(1);
-}
-
-void	error_free(t_dlst *stack_a)
-{
-	dlst_free(stack_a);
-	exit(1);
-}
-
-void	error_free2(t_dlst *stack_a, t_dlst *stack_b)
-{
-	dlst_free(stack_a);
-	dlst_free(stack_b);
-	exit(1);
-}
-
-void	error_free_log(t_dlst *stack_a)
-{
-	dlst_free(stack_a);
-	error_log();
-}
+void	lazy_sort()*/

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:26 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/13 10:17:14 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 00:13:00 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,12 @@ static int	*copy_stack_to_arr(t_dlst *stack, t_node *end, int n)
 	return (unsorted);
 }
 
-int	median_selection_sort(t_dlst *stack, t_node *end)
+int	*selection_sort(t_dlst *stack, t_node *end)
 {
 	int		*sort;
 	int		n;
 	int		i;
 	int		min_i;
-	int		median;
 
 	n = dlst_node_count(stack, end);
 	sort = copy_stack_to_arr(stack, end, n);
@@ -69,7 +68,18 @@ int	median_selection_sort(t_dlst *stack, t_node *end)
 		swap_val(&sort[i], &sort[min_i]);
 		i++;
 	}
-	median = sort[n / 2];
-	free(sort);
-	return (median);
+	return (sort);
 }
+/*static int	max_index(int *arr, int i, int n)
+{
+	int	max_i;
+
+	max_i = i;
+	while (i < n)
+	{
+		if (arr[i] > arr[max_i])
+			max_i = i;
+		i++;
+	}
+	return (max_i);
+}*/

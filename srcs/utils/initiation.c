@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:45:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/12 21:21:02 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/15 11:57:23 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ static void	to_dlst_1d(t_dlst *stack_a, char *argv1)
 	{
 		tmp = newnode(stack_a, (int)ft_atol(stack_a, &argv1));
 		dlst_addfront(stack_a, tmp);
-		if (*argv1 == ' ' && *(argv1 + 1) == '\0')
-			error_free_log(stack_a);
-		else if (*argv1 == ' ')
+		if (*argv1 == ' ')
 			argv1++;
 	}
 }
