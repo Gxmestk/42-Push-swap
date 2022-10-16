@@ -1,15 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lazy_sort.c                                        :+:      :+:    :+:   */
+/*   lazy_sort2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 20:14:25 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 20:37:13 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/10/16 13:46:13 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/10/16 15:41:29 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "sorting.h"
+int	max_two(int x, int y)
+{
+	if (x > y)
+		return (x);
+	else
+		return (y);
+}
 
-void	lazy_sort()*/
+do_instr(stack_a, stack_b, &p);
