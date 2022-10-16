@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 18:12:38 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/10/16 23:44:56 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/10/17 03:34:01 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -163,6 +163,12 @@ debug2:
 
 debug2.1:			
 					./push_swap 12 13 27 15 5 25 22 11 10 9 26 19 1 0 28 29 7 17 2 20 21 24 8 18 3 6 4 14 16 23
+
+debug3:			
+					./push_swap 1 4 3 7 2 0 5 6
+
+visdebug3:
+					python3 pyviz.py 1 4 3 7 2 0 5 6
 #ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 #.PHONY
 .PHONY:				all bonus checker libs clean checker_clean fclean re code

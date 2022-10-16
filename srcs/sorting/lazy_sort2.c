@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:46:13 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 00:10:16 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:45:46 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,20 @@ static int min_two(int x, int y)
 		return (x);
 	else
 		return (y);
+}
+
+int	any_curr_lab(t_dlst *stack_b, int lab)
+{
+	t_node	*curr;
+
+	curr = stack_b->last;
+	while (curr != NULL)
+	{
+		if (curr->label == lab)
+			return (1);
+		curr = curr->prev;
+	}
+	return (0);
 }
 
 void	do_instr(t_dlst *stack_a, t_dlst  *stack_b, t_r *p)

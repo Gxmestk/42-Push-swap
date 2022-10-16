@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:45:58 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 11:57:23 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 02:17:30 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static	t_node	*newnode(t_dlst *stack_a, int val)
 	node->val = val;
 	node->next = NULL;
 	node->prev = NULL;
+	node->label = 0;
 	return (node);
 }
 
