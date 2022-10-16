@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:04:02 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 15:40:59 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 20:36:05 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,13 @@ static t_node	*mini_placable(t_dlst *stack_a, t_node *node, t_r *l)
 
 	i = 0;
 	curr = stack_a->last;
-	ret = curr;
+	ret = NULL;
 	while (curr != NULL)
 	{
-		if (curr->val > node->val && curr->val < ret->val)
+		//ft_printf("\t\tcurr->val = %d\n",curr->val);
+		if (curr->val > node->val && (ret == NULL || curr->val < ret->val))
 		{
+			//ft_printf("\t\t\tcurr->val = %d\n",curr->val);
 			if (i > stack_a->size / 2)
 				l->rra = stack_a->size - i;
 			else
@@ -40,9 +42,10 @@ static t_node	*mini_placable(t_dlst *stack_a, t_node *node, t_r *l)
 static void set_current_mini(t_r *p, t_r *l)
 {
 	l->move = max_two(l->ra, l->rb) + max_two(l->rra, l->rrb);
-	if (l->move > p->move)
+	//ft_printf("l->move = %d, p->move = %d\n",l->move, p->move);
+	if (l->move > p->move && p->a != NULL)
 		return ;
-	if (l->a->val - l->b->val < p->a->val - p->b->val
+	if (p->a == NULL || (l->a->val - l->b->val < p->a->val - p->b->val)
 		|| (l->a->val - l->b->val == p->a->val - p->b->val
 		&& l->b->val > p->b->val))
 	{
@@ -79,6 +82,7 @@ static void	mini_move(t_dlst *stack_a, t_dlst *stack_b, t_r *p)
 	reset_mini(p);
 	while (curr != NULL)
 	{
+		//ft_printf("curr->val = %d\n",curr->val);
 		reset_mini(&l);
 		if (i > stack_b->size / 2)
 			l.rrb = stack_b->size - i;
@@ -96,11 +100,14 @@ void	lazy_sort(t_dlst *stack_a, t_dlst *stack_b)
 {
 	t_r	p;
 
+	if (dlst_issort(stack_a, stack_a->first, ASC))
+		return ;
 	smart_partition(stack_a, stack_b);
 	hardcode_sort(stack_a, stack_b);
 	while (!dlst_isempty(stack_b))
 	{
 		mini_move(stack_a, stack_b, &p);
+		//ft_printf("p->ra = %d p->rb = %d p->rra = %d p->rrb = %d\n",p.ra,p.rb,p.rra,p.rrb);
 		do_instr(stack_a, stack_b, &p);
 	}
 	while (stack_a->first != max_val_node(stack_a))

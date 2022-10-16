@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:15:19 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 10:03:41 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 19:12:58 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ static void	log_base_three_partition(t_dlst *stack_a, t_dlst *stack_b, int *sort
 		rotate_count(stack_b, B, p.to_rr);
 }
 
-
 void	smart_partition(t_dlst *stack_a, t_dlst *stack_b)
 {
 	int	*sort;
@@ -77,4 +76,18 @@ void	smart_partition(t_dlst *stack_a, t_dlst *stack_b)
 		log_base_three_partition(stack_a, stack_b, sort);
 		free(sort);
 	}
+}
+
+int		only_z(t_dlst *stack_b, t_partition *p)
+{
+	t_node	*curr;
+
+	curr = stack_b->last;
+	while(curr != NULL)
+	{
+		if (curr->val >= p->pivot_val[0])
+			return (0);
+		curr = curr->prev;
+	}
+	return (1);
 }

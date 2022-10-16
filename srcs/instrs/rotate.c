@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 01:14:12 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 20:22:13 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 static void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
 {
+	//ft_printf("----rotate_rotate------\n");
+	//if (stack_b->size)
+		//dlst_print(stack_b, B);
 	t_node	*tmp;
 
 	tmp = dlst_removeback(stack_a);
@@ -26,8 +29,12 @@ static void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
 void	rotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
 {
 	int	i;
-
+	//ft_printf("----rotate_rotate_count------\n");
+	//if (stack_b->size)
+		//dlst_print(stack_b, B);
 	i = 0;
+	if (n < 0)
+		return ;
 	while (i < n)
 	{
 		rotate_rotate(stack_a, stack_b);
@@ -39,7 +46,12 @@ void	rotate_count(t_dlst *stack, int s, int n)
 {
 	int	i;
 
+	//ft_printf("----rotate_count------\n");
+	//if (stack->size)
+		//dlst_print(stack, B);
 	i = 0;
+	if (n < 0)
+		return ;
 	while (i < n)
 	{
 		rotate(stack, s);
@@ -49,6 +61,7 @@ void	rotate_count(t_dlst *stack, int s, int n)
 
 void	smart_rotate_partition(t_dlst *stack_a, t_dlst *stack_b, t_partition *p)
 {
+
 	if (p->np < 0)
 		rrotate_count(stack_a, A, -p->np);
 	else if (p->np > 1 && p->to_rr >= p->np - 1)
@@ -62,7 +75,7 @@ void	smart_rotate_partition(t_dlst *stack_a, t_dlst *stack_b, t_partition *p)
 		rotate_count(stack_a, A, p->np - 1 - p->to_rr);
 		p->to_rr = 0;
 	}
-	if (p->group == Z)
+	if (p->group == Z && stack_b->last && !(only_z(stack_b, p)))
 		(p->to_rr)++;
 	else if (p->group == Y)
 	{

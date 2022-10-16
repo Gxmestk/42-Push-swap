@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 18:12:38 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/10/16 14:03:28 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/10/16 19:49:20 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,5 +108,24 @@ re:					fclean all
 
 code:				
 					code $(SRCS)
+
+vis500:
+					python3 pyviz.py `ruby -e "puts (-250..249).to_a.shuffle.join(' ')"`
+
+vis100:
+					python3 pyviz.py `ruby -e "puts (-50..49).to_a.shuffle.join(' ')"`
+
+vis10:
+					python3 pyviz.py `ruby -e "puts (-5..4).to_a.shuffle.join(' ')"`
+
+vis20:
+					python3 pyviz.py `ruby -e "puts (-10..9).to_a.shuffle.join(' ')"`
+
+vis30:
+					python3 pyviz.py `ruby -e "puts (-15..14).to_a.shuffle.join(' ')"`
+
+visdegug:
+					python3 pyviz.py 21 10 2 3 5 17 11 4 7 22 23 24 16 20 6 1 13 9 8 12 18 25 26 19 14 15 27
+#ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 #.PHONY
-.PHONY:				all bonus checker libs clean checker_clean fclean re code
+.PHONY:				all bonus checker libs clean checker_clean fclean re code vis500 vis100 vis10 vis20 vis30

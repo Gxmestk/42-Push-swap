@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 22:11:40 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 19:25:05 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,15 @@ typedef struct s_dlst
 	t_node	*last;
 	int		size;
 }	t_dlst;
+
+typedef struct s_partition
+{
+	int	pivot_val[3];
+	int	np;
+	int	npv;
+	int	group;
+	int	to_rr;
+}	t_partition;
 
 void	check_args(t_dlst *stack_a, int argc, char **argv);
 int		ft_isdigit(int c);

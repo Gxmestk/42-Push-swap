@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:13:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 15:41:38 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 19:22:50 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void	five_val_sort(t_dlst *stack_a, t_dlst *stack_b, int s);
 void	hardcode_sort(t_dlst *stack_a, t_dlst *stack_b);
 int		*selection_sort(t_dlst *stack, t_node *end);
 void	smart_partition(t_dlst *stack_a, t_dlst *stack_b);
+int		only_z(t_dlst *stack_b, t_partition *p);
 int		max_two(int x, int y);
 void	lazy_sort(t_dlst *stack_a, t_dlst *stack_b);
-void	do_instr(stack_a, stack_b, &p);
-
+void	do_instr(t_dlst *stack_a, t_dlst  *stack_b, t_r *p);
 
 #endif

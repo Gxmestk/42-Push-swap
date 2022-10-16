@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:18:19 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 10:05:22 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 17:13:50 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@ void	five_val_sort(t_dlst *stack_a, t_dlst *stack_b, int s)
 void	hardcode_sort(t_dlst *stack_a, t_dlst *stack_b)
 {
 	if (stack_a->size == 5)
-		five_val_sort(&stack_a, &stack_b, A);
+		five_val_sort(stack_a, stack_b, A);
 	else if (stack_a->size == 4)
-		four_val_sort(&stack_a, &stack_b, A);
+		four_val_sort(stack_a, stack_b, A);
 	else if (stack_a->size == 3)
-		three_val_sort(&stack_a, stack_a->first, A);
+		three_val_sort(stack_a, stack_a->first, A);
 	else if (stack_a->size == 2)
-		two_val_sort(&stack_a, A);
-	else
-		smart_partition(&stack_a, &stack_b);
+		two_val_sort(stack_a, A);
 }
