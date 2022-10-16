@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 19:25:05 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:21:41 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@
 typedef struct s_node
 {
 	int				val;
+	int				index;
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;

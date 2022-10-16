@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:15:19 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 19:12:58 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:21:21 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	smart_partition(t_dlst *stack_a, t_dlst *stack_b)
 	while (stack_a->size > 5)
 	{
 		sort = selection_sort(stack_a, stack_a->first);
+		arg_sort(stack_a, sort);
 		log_base_three_partition(stack_a, stack_b, sort);
 		free(sort);
 	}

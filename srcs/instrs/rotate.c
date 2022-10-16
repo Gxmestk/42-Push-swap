@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 20:22:13 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:12:34 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
 {
-	//ft_printf("----rotate_rotate------\n");
-	//if (stack_b->size)
-		//dlst_print(stack_b, B);
 	t_node	*tmp;
 
 	tmp = dlst_removeback(stack_a);
@@ -29,9 +26,7 @@ static void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
 void	rotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
 {
 	int	i;
-	//ft_printf("----rotate_rotate_count------\n");
-	//if (stack_b->size)
-		//dlst_print(stack_b, B);
+
 	i = 0;
 	if (n < 0)
 		return ;
@@ -46,9 +41,6 @@ void	rotate_count(t_dlst *stack, int s, int n)
 {
 	int	i;
 
-	//ft_printf("----rotate_count------\n");
-	//if (stack->size)
-		//dlst_print(stack, B);
 	i = 0;
 	if (n < 0)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:18:19 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 17:13:50 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 23:06:11 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	five_val_sort(t_dlst *stack_a, t_dlst *stack_b, int s)
 		return ;
 	push(stack_a, stack_b, A);
 	four_val_sort(stack_a, stack_b, s);
+	push_back_atmost(stack_b, stack_a, B, 1);
 }
 
 void	hardcode_sort(t_dlst *stack_a, t_dlst *stack_b)

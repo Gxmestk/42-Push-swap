@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 22:31:41 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 00:19:12 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/16 23:05:46 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	four_val_sort(t_dlst *stack_a, t_dlst *stack_b, int s)
 		push(stack_a, stack_b, A);
 		three_val_sort(stack_a, stack_a->first, s);
 	}
-	push_back_atmost(stack_b, stack_a, B, 2);
+	push_back_atmost(stack_b, stack_a, B, 1);
 }

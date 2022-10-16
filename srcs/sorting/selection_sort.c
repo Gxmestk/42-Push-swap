@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:26 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 17:09:32 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:31:10 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,28 @@ int	*selection_sort(t_dlst *stack, t_node *end)
 		i++;
 	}
 	return (sort);
+}
+
+void	arg_sort(t_dlst *stack_a, int *sort)
+{
+	t_node	*curr;
+	int		i;
+
+	curr = stack_a->last;
+	while (curr != NULL)
+	{
+		i = 0;
+		while (i < stack_a->size)
+		{
+			if (curr->val == sort[i])
+			{
+				curr->index = i;
+				break ;
+			}
+			i++;
+		}
+		curr = curr->prev;
+	}
 }
 /*static int	max_index(int *arr, int i, int n)
 {

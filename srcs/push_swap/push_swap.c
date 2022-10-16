@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:45:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 20:19:44 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:11:18 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ int	main(int argc, char **argv)
 		lazy_sort(&stack_a, &stack_b);
 	else
 		hardcode_sort(&stack_a, &stack_b);
-
-	//ft_printf("\nresult\n");
-	//dlst_print(&stack_a, A);
 	dlst_free(&stack_a);
 	return (0);
 }
