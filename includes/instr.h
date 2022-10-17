@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:13:07 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 19:25:12 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:20:58 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@
 
 void	rotate(t_dlst *stack, int s);
 void	rotate_count(t_dlst *stack, int s, int n);
+void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b, int s);
 void	rotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n);
 void	smart_rotate_partition(t_dlst *stack_a, t_dlst *stack_b, t_partition *p);
 void	rrotate(t_dlst *stack, int s);
 void	rrotate_count(t_dlst *stack, int s, int n);
-void	rrotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n);
+void	rrotate_rrotate(t_dlst *stack_a, t_dlst *stack_b, int s);
+void	rrotate_rrotate_count(t_dlst *stack_a, t_dlst *stack_b, int n);
 void	swap(t_dlst *stack, int s);
+void	swap_swap(t_dlst *stack_a, t_dlst *stack_b, int s);
 void	push(t_dlst	*stack_from, t_dlst *stack_to, int s);
 void	push_back_count(t_dlst *stack_from, t_dlst *stack_to, int s, int n);
 void	push_back_all(t_dlst *stack_from, t_dlst *stack_to, int s);

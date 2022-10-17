@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 03:16:16 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:12:01 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "instr.h"
 
-static void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
+void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b, int s)
 {
 	t_node	*tmp;
 
@@ -20,7 +20,8 @@ static void	rotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
 	dlst_addfront(stack_a, tmp);
 	tmp = dlst_removeback(stack_b);
 	dlst_addfront(stack_b, tmp);
-	ft_printf("rr\n");
+	if (s == AB)
+		ft_printf("rr\n");
 }
 
 void	rotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
@@ -32,7 +33,7 @@ void	rotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
 		return ;
 	while (i < n)
 	{
-		rotate_rotate(stack_a, stack_b);
+		rotate_rotate(stack_a, stack_b, AB);
 		i++;
 	}
 }

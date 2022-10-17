@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 18:12:38 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/10/17 03:34:01 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/10/17 13:40:54 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,7 @@ LIBS				= -L $(PRINTF_DIR) -lftprintf
 SRCS				= $(PUSH_SWAP_DIR)/push_swap.c						\
 					  $(UTIL_SRCS)										\
 					  $(INSTR_SRCS)										\
-					  $(SORTING_SRCS)									\
-					  $(CHECKER_SRCS)
+					  $(SORTING_SRCS)
 UTIL_SRCS			= $(UTIL_DIR)/initiation.c							\
 					  $(UTIL_DIR)/dlst_instrs.c							\
 					  $(UTIL_DIR)/dlst_utils.c							\
@@ -58,15 +57,16 @@ SORTING_SRCS		= $(SORTING_DIR)/selection_sort.c					\
 					  $(SORTING_DIR)/2val_sort.c						\
 					  $(SORTING_DIR)/4val_sort.c						\
 					  $(SORTING_DIR)/5val_sort.c
-CHECKER_SRCS		= $(CHECKER_DIR)/checker.c
+CHECKER_SRCS		= $(CHECKER_DIR)/checker.c							\
+					  $(CHECKER_DIR)/get_next_line.c					\
+					  $(CHECKER_DIR)/get_next_line_utils.c				\
+					  $(UTIL_SRCS)										\
+					  $(INSTR_SRCS)										\
+					  $(SORTING_SRCS)					
 
 #Object files 
 OBJS 				= $(SRCS:%.c=%.o)
 CHECKER_OBJS 		= $(CHECKER_SRCS:%.c=%.o)
-
-#Build Directories
-BUILD_DIR			= build
-CHECKER_BUILD_DIR	= checker_build
 
 #Command
 
@@ -102,6 +102,7 @@ clean:
 fclean:				clean
 					make fclean -C $(PRINTF_DIR)
 					$(RM) $(NAME)
+					$(RM) $(CHECKER_NAME)
 
 #Restart
 re:					fclean all
@@ -109,6 +110,7 @@ re:					fclean all
 code:				
 					code $(SRCS)
 
+#isual & Debug
 vis500:
 					python3 pyviz.py `ruby -e "puts (-250..249).to_a.shuffle.join(' ')"`
 

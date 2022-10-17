@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 14:45:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 13:39:46 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/10/17 12:25:27 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/10/17 13:25:29 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef CHECKER_H
+# define CHECKER_H
 
-int	main(int argc, char **argv)
-{
-	static t_dlst	stack_a;
-	static t_dlst	stack_b;
+# include "push_swap.h"
+# include "get_next_line.h"
 
-	check_args(&stack_a, argc, argv);
-	if (stack_a.size > 5)
-		lazy_sort(&stack_a, &stack_b);
-	else
-		hardcode_sort(&stack_a, &stack_b);
-	dlst_free(&stack_a);
-	return (0);
-}
+#endif

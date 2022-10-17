@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 02:17:30 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:08:07 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@
 # define DESC 2
 # define A 1
 # define B 2
+# define AB 3
 # define X 33
 # define Y 66
 # define Z 99
-# define MERGE 1
 
 typedef struct s_node
 {
@@ -37,6 +37,7 @@ typedef struct s_node
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
+
 
 typedef struct s_dlst
 {
@@ -64,6 +65,7 @@ void	error_log(void);
 void	error_free(t_dlst *stack_a);
 void	error_free2(t_dlst *stack_a, t_dlst *stack_b);
 void	error_free_log(t_dlst *stack_a);
+int		ft_strncmp(const char *str1, const char *str2, size_t len);
 void	dlst_addfront(t_dlst *dlst, t_node *node);
 void	dlst_addback(t_dlst *dlst, t_node *node);
 void	dlst_addat(t_dlst *dlst, t_node *node, int i);

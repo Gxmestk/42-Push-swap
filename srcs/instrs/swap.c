@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:10 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 12:00:45 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:21:06 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,13 @@ void	swap(t_dlst *stack, int s)
 		ft_printf("sa\n");
 	else if (s == B)
 		ft_printf("sb\n");
+}
+
+void	swap_swap(t_dlst *stack_a, t_dlst *stack_b, int s)
+{
+	swap(stack_a,NO);
+	swap(stack_b, NO);
+	if (s == AB)
+		ft_printf("ss\n");
 }
 /*last(top) go to fisrt(bottom)*/

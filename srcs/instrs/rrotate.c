@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:21 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 00:16:15 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:21:46 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "instr.h"
 
-static void	rrotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
+void	rrotate_rrotate(t_dlst *stack_a, t_dlst *stack_b, int s)
 {
 	t_node	*tmp;
 
@@ -20,10 +20,11 @@ static void	rrotate_rotate(t_dlst *stack_a, t_dlst *stack_b)
 	dlst_addback(stack_a, tmp);
 	tmp = dlst_removefront(stack_b);
 	dlst_addback(stack_b, tmp);
-	ft_printf("rrr\n");
+	if (s == AB)
+		ft_printf("rrr\n");
 }
 
-void	rrotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
+void	rrotate_rrotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
 {
 	int	i;
 
@@ -32,7 +33,7 @@ void	rrotate_rotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
 		return ;
 	while (i < n)
 	{
-		rrotate_rotate(stack_a, stack_b);
+		rrotate_rrotate(stack_a, stack_b, AB);
 		i++;
 	}
 	
