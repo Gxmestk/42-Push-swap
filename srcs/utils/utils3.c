@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 22:32:40 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 09:59:52 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:37:13 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_node	*max_val_node(t_dlst *stack)
 	return (max);
 }
 
-static void next_min_val_index(int *arr, int size, int *mvi, int *nmvi)
+static void	next_min_val_index(int *arr, int size, int *mvi, int *nmvi)
 {
 	int	i;
 
@@ -56,11 +56,11 @@ static void next_min_val_index(int *arr, int size, int *mvi, int *nmvi)
 	{
 		if (arr[i] < arr[*nmvi] && i != *mvi)
 			*nmvi = i;
-		i++; 
+		i++;
 	}
 }
 
-void max_val_index(int *arr, int size, int *mvi, int *nmvi)
+void	max_val_index(int *arr, int size, int *mvi, int *nmvi)
 {
 	int	i;
 

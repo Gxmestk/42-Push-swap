@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:21 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 13:21:46 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:33:43 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	rrotate_rrotate_count(t_dlst *stack_a, t_dlst *stack_b, int n)
 		rrotate_rrotate(stack_a, stack_b, AB);
 		i++;
 	}
-	
 }
 
 void	rrotate_count(t_dlst *stack, int s, int n)

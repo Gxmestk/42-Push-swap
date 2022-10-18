@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 00:37:08 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 13:08:07 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:33:17 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ typedef struct s_node
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
-
 
 typedef struct s_dlst
 {
@@ -78,6 +77,6 @@ void	dlst_free(t_dlst *dlst);
 int		dlst_node_count(t_dlst *dlst, t_node *end);
 t_node	*min_val_node(t_dlst *stack);
 t_node	*max_val_node(t_dlst *stack);
-void 	max_val_index(int *arr, int size, int *mvi, int *nmvi);
+void	max_val_index(int *arr, int size, int *mvi, int *nmvi);
 void	copy_stack_to_arr_nomal(t_dlst *stack, int *arr, int size);
 #endif

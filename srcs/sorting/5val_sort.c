@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:18:19 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 23:06:11 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:34:27 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	five_val_sort(t_dlst *stack_a, t_dlst *stack_b, int s)
 		else if (f.nmvi == 0 || f.nmvi == 1)
 			swap(stack_a, A);
 	}
-	else if(f.mvi == 3 || f.mvi == 4)
+	else if (f.mvi == 3 || f.mvi == 4)
 		rrotate(stack_a, A);
 	if (f.mvi == 3)
 		rrotate(stack_a, A);

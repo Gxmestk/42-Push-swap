@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 13:46:13 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 13:13:36 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:34:46 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	max_two(int x, int y)
 		return (y);
 }
 
-static int min_two(int x, int y)
+static int	min_two(int x, int y)
 {
 	if (x < y)
 		return (x);
@@ -42,7 +42,7 @@ int	any_curr_lab(t_dlst *stack_b, int lab)
 	return (0);
 }
 
-void	do_instr(t_dlst *stack_a, t_dlst  *stack_b, t_r *p)
+void	do_instr(t_dlst *stack_a, t_dlst *stack_b, t_r *p)
 {
 	if (p->ra && p->rb)
 		rotate_rotate_count(stack_a, stack_b, min_two(p->ra, p->rb));

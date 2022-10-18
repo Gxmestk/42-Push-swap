@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:04:02 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 04:33:44 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:42:06 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static t_node	*mini_placable(t_dlst *stack_a, t_node *node, t_r *l)
 	return (ret);
 }
 
-static void set_current_mini(t_dlst *stack_b, t_r *p, t_r *l)
+static void	set_current_mini(t_dlst *stack_b, t_r *p, t_r *l)
 {
 	l->move = max_two(l->ra, l->rb) + max_two(l->rra, l->rrb);
 	if (l->move > p->move && p->a != NULL)
@@ -45,7 +45,7 @@ static void set_current_mini(t_dlst *stack_b, t_r *p, t_r *l)
 	if (p->a == NULL || (l->b == max_val_node(stack_b))
 		|| (l->a->index - l->b->index < p->a->index - p->b->index)
 		|| (l->a->index - l->b->index == p->a->index - p->b->index
-		&& l->b->val > p->b->val))
+			&& l->b->val > p->b->val))
 	{
 		p->move = l->move;
 		p->ra = l->ra;
@@ -56,7 +56,8 @@ static void set_current_mini(t_dlst *stack_b, t_r *p, t_r *l)
 		p->b = l->b;
 	}
 }
-static void reset_mini(t_r *r)
+
+static void	reset_mini(t_r *r)
 {
 	r->ra = 0;
 	r->rb = 0;

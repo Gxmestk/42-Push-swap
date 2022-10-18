@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 21:14:02 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/15 11:59:13 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:37:28 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void	ft_isnumeric_2d(char **argv)
 	while (argv[i] != NULL)
 	{
 		j = 0;
-
 		if (argv[i][j] == '-' || argv[i][j] == '+')
 			j++;
 		while ((ft_isdigit(argv[i][j])))

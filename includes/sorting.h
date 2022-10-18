@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:13:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 02:35:47 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:36:47 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ int		only_z(t_dlst *stack_b, t_partition *p);
 int		max_two(int x, int y);
 int		any_curr_lab(t_dlst *stack_b, int lab);
 void	lazy_sort(t_dlst *stack_a, t_dlst *stack_b);
-void	do_instr(t_dlst *stack_a, t_dlst  *stack_b, t_r *p);
+void	do_instr(t_dlst *stack_a, t_dlst *stack_b, t_r *p);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 18:12:38 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/10/17 13:40:54 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/10/18 20:30:32 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ UTIL_DIR			= $(SRC_DIR)/utils
 INSTR_DIR			= $(SRC_DIR)/instrs
 SORTING_DIR			= $(SRC_DIR)/sorting
 CHECKER_DIR			= $(SRC_DIR)/checker
-
 #Includes
 INCLUDES 			= -I $(INCS_DIR)									\
 					  -I $(PRINTF_DIR)/includes
@@ -110,7 +109,14 @@ re:					fclean all
 code:				
 					code $(SRCS)
 
-#isual & Debug
+norm:
+					clear && norminette $(SRC_DIR)/ $(PRINTF_DIR)/ $(INCS_DIR)/ | grep "Error"
+normh:
+					clear &&norminette -R CheckHeader $(SRC_DIR)/ $(PRINTF_DIR)/ $(INCS_DIR)/ | grep "Error"
+normf:
+					clear && norminette -R CheckForbiddenSourceHeader $(SRC_DIR)/ $(PRINTF_DIR)/ $(INCS_DIR)/ | grep "Error"
+
+#visual & Debug
 vis500:
 					python3 pyviz.py `ruby -e "puts (-250..249).to_a.shuffle.join(' ')"`
 
@@ -173,7 +179,7 @@ visdebug3:
 					python3 pyviz.py 1 4 3 7 2 0 5 6
 #ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 #.PHONY
-.PHONY:				all bonus checker libs clean checker_clean fclean re code
+.PHONY:				all bonus checker libs clean checker_clean fclean re code norm normh normf
 
 
 #-1 -2 -3 1 0 9 4 -12 6 18 5 -5 2 3 -4

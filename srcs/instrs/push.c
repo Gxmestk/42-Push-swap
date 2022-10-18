@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:13 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/16 00:49:56 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:34:15 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	push_back_all(t_dlst *stack_from, t_dlst *stack_to, int s)
 	}
 }
 
-int		nearest_to_push(t_dlst *stack_a, int *pivot_val)
+int	nearest_to_push(t_dlst *stack_a, int *pivot_val)
 {
 	int		i;
 	t_node	*curr;

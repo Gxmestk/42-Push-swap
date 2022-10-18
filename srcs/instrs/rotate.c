@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 13:12:01 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:33:58 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,12 @@ void	rotate_count(t_dlst *stack, int s, int n)
 
 void	smart_rotate_partition(t_dlst *stack_a, t_dlst *stack_b, t_partition *p)
 {
-
 	if (p->np < 0)
 		rrotate_count(stack_a, A, -p->np);
 	else if (p->np > 1 && p->to_rr >= p->np - 1)
 	{
 		rotate_rotate_count(stack_a, stack_b, p->np - 1);
-		p->to_rr = p->to_rr - (p->np - 1); 
+		p->to_rr = p->to_rr - (p->np - 1);
 	}
 	else if (p->np > 1 && p->to_rr < p->np - 1)
 	{

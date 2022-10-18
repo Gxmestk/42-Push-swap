@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:15:19 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 03:21:59 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:36:04 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,5 @@ int	only_z(t_dlst *stack_b, t_partition *p)
 			return (0);
 		curr = curr->prev;
 	}
-
 	return (1);
 }

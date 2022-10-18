@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:46:10 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/10/17 13:21:06 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:33:34 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	swap(t_dlst *stack, int s)
 
 void	swap_swap(t_dlst *stack_a, t_dlst *stack_b, int s)
 {
-	swap(stack_a,NO);
+	swap(stack_a, NO);
 	swap(stack_b, NO);
 	if (s == AB)
 		ft_printf("ss\n");
