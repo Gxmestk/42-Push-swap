@@ -1,11 +1,12 @@
 From the visualizer
-This algorithm is slow when pushing back from stack_b to stack_a at group 1 and 2 which contain 66% of value
+1) This algorithm is slow when pushing back from stack_b to stack_a at group 1 and 2 which contain 66% of value
 
-and a reverse rotate instruction the bottom to top have to be use 
+2) A reverse rotate instruction the bottom to top have to be use 
 
 This code can be optimize further by
 
+1) Weigthing to the max node (if max node and move < 10 at group 1 and 2
+then return and use those movement)
+
 2) Smarter partition by log base 3 partition + partition arrange like quicksort by pre calculating all of the pivot. 
 for example,
-- weigthing to the max node (if max node and move < 10 at group 1 and 2
-then return and use those movement)
